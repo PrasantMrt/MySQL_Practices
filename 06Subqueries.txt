@@ -1,0 +1,5 @@
+-- Subquery in WHERE
+SELECT name FROM students WHERE age > (SELECT AVG(age) FROM students);
+
+-- Subquery in FROM
+SELECT AVG(sub.age) FROM (SELECT age FROM students WHERE grade = '11') AS sub;
